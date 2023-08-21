@@ -19,7 +19,7 @@ document.querySelector('.form').addEventListener('submit', function(evt) {
     const step = parseInt(evt.target.elements.step.value);
     const amount = parseInt(evt.target.elements.amount.value);
 
-    for (let i = 0; i <= amount; i += 1) {
+    for (let i = 1; i <= amount; i += 1) {
         const delay = firstDelay + (i - 1) * step;
         createPromise(i, delay)
             .then(({ position, delay }) => {
